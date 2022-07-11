@@ -1,24 +1,33 @@
-# Arcana Standard Contracts
+# Centralized bridge
 
-This project contains ERC standard contracts with Arcana supported functions.
+Centralized bridge supports transfer of data from supported Ethereum testnets i.e. Ropsten and Polygon Mumbai to Arcana network. 
+- Current implementaion is specific to the arcana private NFT ownership-transfer.
+- The bridge does the transfer of file/asset on Arcana whenever there is any transfer of NFT on either Mumbai or Ropsten.
 
+## Usage
 
-## Contracts
+## Start the bridge 
 
-### ARC721: 
-
-This ARC721 is a standard for representing ownership of non-fungible tokens, that is, where each token is unique. Which is compatible with ERC721 interface.
-
-**Minting** : Use _mint_ function to create new tokens. function accepts receipent _Address_ and _token Id_ of newly minted token.
-
-### Usage
-Additional to ERC721 standard, we have to pass Bridge Address while deploying the contract.
-
-#### _bridgeContractAddress_ for Mumbai
+```shell
+npm run up
 ```
-0x2a6137D49A5597aC3b26B7464Edf20A553291584
+
+### Health endpoint 
+```shell
+npm run server
 ```
-#### _bridgeContractAddress_ for Ropsten
+In a new termianl from server, run
+```shell
+npm run get-health
 ```
-0x491f0c066F6e126A34F57346613db5628B41ba18
+
+### NFT transfer status
+```shell
+npm run server
 ```
+In a new termianl from server, run
+```shell
+npm run status --queryBlock=BLOCK_NO --chainId=CHAIN_ID
+ ```
+**chainId** for mumbai is 80001, for ropsten is 3.
+**queryBlock** is the blockNumber of mint/transfer on the destination chains.
