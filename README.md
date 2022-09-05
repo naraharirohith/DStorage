@@ -1,6 +1,7 @@
 # Arcana Smart Contracts
 
 [![Build Status](https://www.travis-ci.com/arcana-network/smart-contract.svg?branch=main)](https://www.travis-ci.com/arcana-network/smart-contract)
+![flow_arcana](https://user-images.githubusercontent.com/44583503/188399944-1839c876-cc0f-4e31-84ac-1dc41bcbfbf4.png)
 
 Arcana's [Storage SDK](https://github.com/arcana-network/storage) features are powered and maintained by Arcana Smart Contracts.
 - Handle's main file operations like upload, share, revoke, changeFileOwner, delete etc..
